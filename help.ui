@@ -1,0 +1,86 @@
+<!--
+ * This file is part of Blind Camaleon.
+ *
+ * Blind Camaleon is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Blind Camaleon is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Blind Camaleon.  If not, see <http://www.gnu.org/licenses/lgpl-3.0.txt>.
+-->
+
+<ui version="4.0" >
+ <class>HelpDialog</class>
+ <widget class="QDialog" name="HelpDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>600</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>600</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Image Editor Help</string>
+  </property>
+  <layout class="QHBoxLayout" >
+   <item>
+    <widget class="QTextEdit" name="textEdit" >
+     <property name="readOnly" >
+      <bool>true</bool>
+     </property>
+     <property name="html" >
+      <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;title>Image Editor Help&lt;/title>&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:x-large; font-weight:600;">&lt;span style=" font-size:x-large;">Abrindo uma imagem&lt;/span>&lt;/p>
+&lt;ul style="-qt-list-indent: 1;">&lt;li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small; font-weight:600;">Ctrl+O ou File/Open&lt;/span>&lt;/li>&lt;/ul>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small;">Abre uma imagem que será tratada pelo programa de varias maneiras, dependendo da opção escolhida pelo usuário.&lt;/span>&lt;/p>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>
+&lt;p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:x-large; font-weight:600;">&lt;span style=" font-size:x-large;">Salvar imagem atual&lt;/span>&lt;/p>
+&lt;ul style="-qt-list-indent: 1;">&lt;li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small; font-weight:600; color:#000000;">Ctrl+Shift+S ou File/Save&lt;/span>&lt;/li>&lt;/ul>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small;">Salva a imagem atual e suas alterações que foram realizadas até este momento em um diretório a ser escolhido.&lt;/span>&lt;/p>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small;">Com este recurso você pode salvar a imagem original, sua versão em escala de cinza ou ainda o espectro de fourier&lt;/span>&lt;/p>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>
+&lt;p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:x-large; font-weight:600;">&lt;span style=" font-size:x-large;">Gerar escala de cinza&lt;/span>&lt;/p>
+&lt;ul style="-qt-list-indent: 1;">&lt;li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small; font-weight:600;">Ctrl+G ou Image/Generate Gray Scale&lt;/span> &lt;/li>&lt;/ul>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small; color:#000000;">Gera uma versão na escala de cinza da imagem, partindo do pressuposto que está é colorida. Uma função é utilizada para alterar os valores RGB(red, green, blue) de cada pixel da imagem para transformá-lo em um pixel de tom cinza.&lt;/span>&lt;/p>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>
+&lt;p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:x-large; font-weight:600;">&lt;span style=" font-size:x-large;">Gerar Histograma&lt;/span>&lt;/p>
+&lt;ul style="-qt-list-indent: 1;">&lt;li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small; font-weight:600; color:#000000;">Ctrl+H ou Image/Generate Histogram&lt;/span>&lt;/li>&lt;/ul>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small;">Gera o histograma da imagem após ser transformada na versão em escala de cinza, feito com base na distribuição de freqüências de tons de cinza presentes na imagem, normalmente um gráfico de barras verticais.&lt;/span>&lt;/p>
+&lt;p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:x-large; font-weight:600;">&lt;span style=" font-size:x-large;">Espectro de Fourier&lt;/span>&lt;/p>
+&lt;ul style="-qt-list-indent: 1;">&lt;li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small; font-weight:600; color:#000000;">Ctrl+F ou Image/Generate Fourier Spectrum&lt;/span>&lt;/li>&lt;/ul>
+&lt;p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:small;">Gera o espectro de Fourier da imagem atual utilizando uma função que aplica a transformada de Fourier em uma imagem de duas dimensões. O espectro de Fourier é o gráfico da magnitude versus freqüência, aonde a freqüência corresponde a freqüência na forma de senos e cosenos.&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
