@@ -49,7 +49,9 @@ void SimpleFilter::setFilterPosition(int p)
 
 void SimpleFilter::applyFilter()
 {
-    images->addImage(QString().sprintf("%s [%d]", filter->desc(), filterPosition->value()), filter->run(images->getDFT(), filterPosition->value(), imageLabel));
+    char *desc = filter->desc();
+    images->addImage(QString().sprintf("%s [%d]", desc, filterPosition->value()), filter->run(images->getDFT(), filterPosition->value(), imageLabel));
+    delete[] desc;
     close();
 }
 

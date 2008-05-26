@@ -27,9 +27,9 @@ Butterworth::Butterworth(bool low)
 
 char* Butterworth::desc()
 {
-    /*char *d;
-    sprintf(d, "Butterworth (passa %s)", low ? "baixa" : "alta");*/
-    return "Butterworth";
+    char *d = new char[26];
+    sprintf(d, "Butterworth (passa %s)", low ? "baixa" : "alta");
+    return d;
 }
 
 QImage* Butterworth::run(Complex* dft, int value, SimpleFilteredImage* img)
