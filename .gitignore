@@ -1,7 +1,7 @@
 Makefile
-*.o
+src/.obj
+src/.moc
+src/.rcc
+src/.ui
 pid
-moc_*.cpp
-qrc_*.cpp
-ui_*.h
 *~

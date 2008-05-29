@@ -15,19 +15,11 @@
 ## along with Blind Camaleon.  If not, see <http://www.gnu.org/licenses/lgpl-3.0.txt>.
 ###########
 
-
-# files
-HEADERS = pidmain.h about.h help.h histogram.h imagetabs.h complex.h simplefilter.h simplefilteredimage.h fft.h basicfilter.h passaalta.h passabaixa.h idealfilter.h idealfilteredimage.h butterworth.h
-SOURCES = pidmain.cpp about.cpp help.cpp main.cpp histogram.cpp imagetabs.cpp complex.cpp simplefilter.cpp simplefilteredimage.cpp fft.cpp passabaixa.cpp passaalta.cpp basicfilter.cpp idealfilter.cpp idealfilteredimage.cpp butterworth.cpp
-FORMS   = main.ui about.ui help.ui simplefilter.ui ideal.ui
-RESOURCES = images.qrc
-
-# configurations
 TEMPLATE = app
-CONFIG += release
+TARGET = blindcamaleon
 
-# install
-target.path = pidmain
-sources.files = $$SOURCES $$HEADERS $$RESOURCES $$FORMS##.pro
-sources.path = .
-INSTALLS += target sources
+include(src.pri)
+
+SOURCES += main.cpp
+
+DESTDIR = ../
