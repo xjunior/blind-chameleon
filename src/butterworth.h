@@ -24,7 +24,7 @@
 
 class Butterworth : public BasicFilter
 {
-    bool low;
+    bool high;
 public:
     Butterworth(bool);
     QImage* run(Complex*, int, SimpleFilteredImage*);

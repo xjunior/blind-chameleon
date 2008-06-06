@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/html" >
+        <file>filters.html</file>
+        <file>usage.html</file>
+    </qresource>
+    <qresource prefix="/images" >
+        <file>star.png</file>
+        <file>usage.png</file>
+    </qresource>
+</RCC>

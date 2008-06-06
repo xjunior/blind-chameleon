@@ -16,6 +16,44 @@
  */
 
 #include "help.h"
+#include <QListWidgetItem>
+#include <QIcon>
+#include <QTextBrowser>
+#include <QStackedWidget>
+#include <QDebug>
 
 Help::Help(PidMain *parent) : QDialog(parent)
-{ setupUi(this); }
+{
+    setupUi(this);
+
+    QListWidgetItem *usage = new QListWidgetItem(helpList);
+    usage->setIcon(QIcon(":/images/usage.png"));
+    usage->setText("Usage");
+    usage->setTextAlignment(Qt::AlignHCenter);
+    usage->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+
+    QListWidgetItem *filters = new QListWidgetItem(helpList);
+    filters->setIcon(QIcon(":/images/star.png"));
+    filters->setText("Filters");
+    filters->setTextAlignment(Qt::AlignHCenter);
+    filters->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+
+    helps[0] = QUrl("qrc:/html/usage.html");
+    helps[1] = QUrl("qrc:/html/filters.html");
+
+    connect(helpList, SIGNAL(currentItemChanged(QListWidgetItem*, QListWidgetItem*)),
+                this, SLOT(changePage(QListWidgetItem*, QListWidgetItem*)));
+
+    helpList->setCurrentRow(0);
+    helpList->setFlow(QListView::TopToBottom);
+}
+
+void Help::changePage(QListWidgetItem *current, QListWidgetItem* prev)
+{
+    if (!current)
+        current = prev;
+    
+    helpBrowser->clear();
+    helpBrowser->setSource(helps[helpList->row(current)]);
+    helpBrowser->reload();
+}

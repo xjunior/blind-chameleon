@@ -58,7 +58,7 @@ FORMS += \
     simplefilter.ui \
     ideal.ui
 
-RESOURCES += images/images.qrc
+RESOURCES += images/images.qrc help/help.qrc
 
 RCC_DIR = .rcc
 UI_DIR = .ui

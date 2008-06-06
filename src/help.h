@@ -18,16 +18,24 @@
 #ifndef HELP_H
 #define HELP_H
 
-#include <QDialog>
 #include "ui_help.h"
 #include "pidmain.h"
+
+class QDialog;
+class QStackedWidget;
+class QListWidgetItem;
 
 class Help : public QDialog, public Ui::HelpDialog
 {
     Q_OBJECT
 
+    QUrl helps[2];
+
 public:
     Help(PidMain*);
+
+public slots:
+    void changePage(QListWidgetItem*, QListWidgetItem*);
 };
 
 #endif

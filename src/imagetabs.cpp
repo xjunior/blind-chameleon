@@ -62,7 +62,7 @@ ImageTabs::getSpectrum()
             for (int j = 0; j < spectY; j++)
             {
                 pos = (i * spectY) + j;
-                bright = (int) dft[pos].abso();
+                bright = (int) log(dft[pos].magnitude());
                 spectrum->setPixel(i, j, qRgb(bright, bright, bright));
             }
     }

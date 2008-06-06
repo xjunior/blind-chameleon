@@ -20,15 +20,15 @@
 #include <math.h>
 #include <QInputDialog>
 
-Butterworth::Butterworth(bool low)
+Butterworth::Butterworth(bool high)
 {
-    this->low = low; // low is true
+    this->high = high;
 }
 
 char* Butterworth::desc()
 {
     char *d = new char[26];
-    sprintf(d, "Butterworth (passa %s)", low ? "baixa" : "alta");
+    sprintf(d, "Butterworth (passa %s)", high ? "alta" : "baixa");
     return d;
 }
 
@@ -45,7 +45,7 @@ QImage* Butterworth::run(Complex* dft, int value, SimpleFilteredImage* img)
     for (i = 0; i < width; i++)
         for (j = 0; j < height; j++)
         {
-            h = H(i, j, value, img->x0(), img->y0(), low, n);
+            h = H(i, j, value, img->x0(), img->y0(), high, n);
             pos = (i * height) + j;
             dft[pos].setIm(dft[pos].im() * h);
             dft[pos].setRe(dft[pos].re() * h);

@@ -33,7 +33,7 @@ Complex::Complex(Complex *c)
 
 double Complex::abso()
 {
-    return log(hypot(_re, _im));
+    return hypot(_re, _im);
 }
 double Complex::phase()
 {
@@ -42,7 +42,7 @@ double Complex::phase()
 
 double Complex::magnitude()
 {
-    return abs(_re + _im);
+    return abs(_re*_re + _im*_im);
 }
 
 Complex Complex::plus(Complex b)
