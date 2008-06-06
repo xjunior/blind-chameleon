@@ -29,7 +29,7 @@ class Help : public QDialog, public Ui::HelpDialog
 {
     Q_OBJECT
 
-    QUrl helps[2];
+    QUrl helps[3];
 
 public:
     Help(PidMain*);

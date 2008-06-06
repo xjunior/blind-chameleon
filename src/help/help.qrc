@@ -2,13 +2,16 @@
     <qresource prefix="/html" >
         <file>filters.html</file>
         <file>usage.html</file>
+        <file>impl.html</file>
     </qresource>
     <qresource prefix="/images" >
         <file>star.png</file>
         <file>usage.png</file>
+        <file>impl.png</file>
         <file>simple_filter.png</file>
         <file>bw_baixa.png</file>
         <file>bw_alta.png</file>
         <file>spectrum.png</file>
+        <file>histogram.png</file>
     </qresource>
 </RCC>

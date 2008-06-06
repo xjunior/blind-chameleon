@@ -38,8 +38,15 @@ Help::Help(PidMain *parent) : QDialog(parent)
     filters->setTextAlignment(Qt::AlignHCenter);
     filters->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
+    QListWidgetItem *impl = new QListWidgetItem(helpList);
+    impl->setIcon(QIcon(":/images/impl.png"));
+    impl->setText("Implementation");
+    impl->setTextAlignment(Qt::AlignHCenter);
+    impl->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+
     helps[0] = QUrl("qrc:/html/usage.html");
     helps[1] = QUrl("qrc:/html/filters.html");
+    helps[2] = QUrl("qrc:/html/impl.html");
 
     connect(helpList, SIGNAL(currentItemChanged(QListWidgetItem*, QListWidgetItem*)),
                 this, SLOT(changePage(QListWidgetItem*, QListWidgetItem*)));

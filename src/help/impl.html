@@ -1,0 +1,18 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+  <h1>Implementação</h1>
+
+  <h2>FFT:</h2>
+  <p>Foi utilizado uma abordagem do algoritmo recursivo da transformada discreta rápida de fourier onde trata a imagem N x N como um vetor de números tamanho N*N, sendo esse um vetor de números complexos, onde a parte imaginaria de cada ponto eqüivale a zero.</p>
+  <p>Multiplica cada pixel por -1^x+y, sendo (x, y) a posição do pixel na matriz da imagem. Em ordem de centralizar as altas freqüências no centro do espectro de fourier.</p>
+
+  <h2>IFFT:</h2>
+  <p>Utiliza da própria função da FFT para fazer a volta do vetor de complexos (o espectro) para a imagem. Dividindo cada pixel por -1^x+y, sendo (x, y) a posição do pixel na matriz da imagem. Em ordem de retornar as altas freqüências, antes situadas no centro da imagem para suas posições originais.</p>
+
+  <h3>Espectro de Fourier:</h3>
+  <p>O espectro é gerado calculando a magnitude de cada ponto da matriz de complexo.<br /><img src="qrc:/images/spectrum.png" /></p>
+</body>
+</html>
