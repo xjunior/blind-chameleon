@@ -6,5 +6,9 @@
     <qresource prefix="/images" >
         <file>star.png</file>
         <file>usage.png</file>
+        <file>simple_filter.png</file>
+        <file>bw_baixa.png</file>
+        <file>bw_alta.png</file>
+        <file>spectrum.png</file>
     </qresource>
 </RCC>
