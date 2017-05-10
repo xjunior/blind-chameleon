@@ -17,6 +17,7 @@
 
 TEMPLATE = app
 TARGET = blindcamaleon
+QT += core gui widgets
 
 include(src.pri)
 

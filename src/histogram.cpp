@@ -67,7 +67,7 @@ void Histogram::paintGraphBase(QPainter *painter, int max)
 
 void Histogram::paintBar(QPainter *painter, int max, int i)
 {
-    int size = qRound(indexes[i] * (ZERO_POINT - TOP_SPACE) / max) + 1;
+    int size = qRound(double(indexes[i] * (ZERO_POINT - TOP_SPACE) / max)) + 1;
 
     QLinearGradient color;
     int starting_color = i * perClass;

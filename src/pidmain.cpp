@@ -18,6 +18,7 @@
 #include <QtGui>
 #include <QMdiArea>
 #include <QMdiSubWindow>
+#include <QFileDialog>
 #include "pidmain.h"
 #include "about.h"
 #include "help.h"
