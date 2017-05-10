@@ -12,8 +12,8 @@ class SimpleFilteredImage : public QLabel
     QImage *spec;
     int _x0, _y0, _z;
 public:
-    SimpleFilteredImage(QDialog*);
-    SimpleFilteredImage(QWidget*);
+    SimpleFilteredImage(QDialog* dlg);
+    SimpleFilteredImage(QWidget* parent=nullptr);
     void setSpectrum(QImage*);
     QImage* spectrum();
     int y0();

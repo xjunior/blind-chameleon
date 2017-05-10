@@ -37,7 +37,7 @@ class IdealFilteredImage : public QLabel
     QRubberBand *rubberBand;
     QPoint selOrigin, selDest;
 public:
-    IdealFilteredImage(QWidget*);
+    IdealFilteredImage(QWidget* parent=nullptr);
     void setSpectrum(QImage*);
     QImage* spectrum();
     int y0();

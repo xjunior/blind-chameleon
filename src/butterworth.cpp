@@ -38,7 +38,7 @@ QImage* Butterworth::run(Complex* dft, int value, SimpleFilteredImage* img)
     int height = img->spectrum()->height();
     int i, j, pos, size = width * height;
     double h;
-    int n = QInputDialog::getInteger(img, "Butterworth filter", "n=");
+    int n = QInputDialog::getInt(img, "Butterworth filter", "n=");
 
     dft = Fourier::cp(dft, size);
 
